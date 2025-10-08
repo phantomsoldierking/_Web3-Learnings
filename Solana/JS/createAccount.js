@@ -7,7 +7,7 @@ const connection = new Connection(solanaWeb3.clusterApiUrl('devnet'), 'confirmed
 
 // Generate a new keypair for the data account
 const dataAccount = Keypair.generate();
-const payer = Keypair.fromSecretKey(new Uint8Array(JSON.parse(fs.readFileSync(`/Users/harkiratsingh/.config/solana/id.json`, "utf-8")))); // This will be the account paying for the transaction
+const payer = Keypair.fromSecretKey(new Uint8Array(JSON.parse(fs.readFileSync(`~/.config/solana/id.json`, "utf-8")))); // This will be the account paying for the transaction
 
 async function createAccount() {
     // Create a transaction to create and fund the account
